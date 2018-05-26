@@ -13,7 +13,18 @@ exports.up = function(knex, Promise) {
         table.string('state').notNullable();
         table.string('username').notNullable();
         table.text('password').notNullable()
+    })
 
+    .createTable('activites', (table) => {
+        table.increments();
+        table.text('title').notNullable();
+        table.text('description').notNullable();
+        table.string('starting_point').notNullable();
+        table.string('destination').notNullable();
+        table.string('start').notNullable();
+        table.string('end').notNullable();
+        table.integer('user_id').unsigned().references('id').inTable('users').onDelete('cascade');
+        table.timestamp('date_created').defaultTo(knex.fn.now());
     })
 };
 

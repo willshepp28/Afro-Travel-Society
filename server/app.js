@@ -9,6 +9,7 @@ const express = require('express'),
   path = require('path'),
   morgan = require('morgan'),
   userApi = require('./api/userApi'),
+  activityApi = require('./api/activityApi'),
   port = process.env.PORT || 8000;
 application = express();
 
@@ -57,7 +58,7 @@ application.use(cors({
 
 // Api
 application.use('/api/v1/user', userApi);
-
+application.use('/api/v1/activities', activityApi);
 
 
 
