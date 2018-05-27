@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 import { AppRoutingModule }     from './app-routing.module';
+import { ActivityComponent } from './activity/activity.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule }     from './app-routing.module';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
