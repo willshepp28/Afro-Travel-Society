@@ -12,6 +12,8 @@ import { SignupComponent } from './signup/signup.component';
 
 import { AppRoutingModule }     from './app-routing.module';
 import { ActivityComponent } from './activity/activity.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { ActivityComponent } from './activity/activity.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
